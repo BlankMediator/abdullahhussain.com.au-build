@@ -6,65 +6,178 @@
     <title>Abdullah Hussain</title>
     <meta
       name="description"
-      content="Abdullah Hussain's personal site for software projects, experiments, and notes."
+      content="Abdullah Hussain's personal site for software projects, research tools, and working notes."
     >
     <link rel="canonical" href="https://abdullahhussain.com.au/">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">Abdullah Hussain</a>
+      <a class="brand" href="/" aria-label="Abdullah Hussain home">Abdullah Hussain</a>
       <nav aria-label="Primary">
-        <a href="https://github.com/BlankMediator">GitHub</a>
-        <a href="mailto:hello@abdullahhussain.com.au">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#repos">Repos</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="intro" aria-labelledby="page-title">
-        <div class="intro-copy">
-          <p class="eyebrow">BlankMediator on GitHub</p>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Software, research, and useful tools</p>
           <h1 id="page-title">Abdullah Hussain</h1>
           <p class="lede">
-            Software projects, experiments, and working notes gathered under one
-            clean address.
+            I build practical software systems, automation workflows, and
+            research tools that turn messy inputs into usable interfaces,
+            reports, and repeatable processes.
           </p>
-          <div class="actions" aria-label="Profile links">
-            <a class="button primary" href="https://github.com/BlankMediator">GitHub Profile</a>
-            <a class="button" href="https://blankmediator.github.io">GitHub Pages</a>
+          <div class="actions" aria-label="Primary links">
+            <a class="button primary" href="#repos">View public repos</a>
+            <a class="button" href="https://github.com/BlankMediator">Open GitHub profile</a>
           </div>
         </div>
-        <figure class="profile-media">
+
+        <aside class="profile-panel" aria-label="Profile snapshot">
           <img
             src="https://github.com/BlankMediator.png"
             alt="BlankMediator GitHub avatar"
-            width="320"
-            height="320"
+            width="180"
+            height="180"
           >
-        </figure>
+          <dl>
+            <div>
+              <dt>Public repos</dt>
+              <dd>6</dd>
+            </div>
+            <div>
+              <dt>Current focus</dt>
+              <dd>Tools, data, and local-first apps</dd>
+            </div>
+            <div>
+              <dt>Home base</dt>
+              <dd>abdullahhussain.com.au</dd>
+            </div>
+          </dl>
+        </aside>
       </section>
 
-      <section class="content-band" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="eyebrow">Current Home</p>
-          <h2 id="projects-title">Project links</h2>
+      <section class="summary-band" aria-label="Snapshot">
+        <div>
+          <strong>Python</strong>
+          <span>research scripts, data pipelines, CLI tools</span>
         </div>
-        <div class="link-list">
-          <a href="https://github.com/BlankMediator">
-            <span>GitHub</span>
-            <strong>github.com/BlankMediator</strong>
-          </a>
-          <a href="https://blankmediator.github.io">
-            <span>Account Pages</span>
-            <strong>blankmediator.github.io</strong>
-          </a>
+        <div>
+          <strong>JavaScript</strong>
+          <span>local apps, browser interfaces, static tools</span>
+        </div>
+        <div>
+          <strong>Documentation</strong>
+          <span>auditable write-ups, run notes, reproducible outputs</span>
+        </div>
+      </section>
+
+      <section class="content-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">How I work</p>
+          <h2 id="work-title">Small systems with clear evidence</h2>
+        </div>
+        <div class="work-grid">
+          <article>
+            <h3>Research tooling</h3>
+            <p>
+              Scripts and reports that keep data sources, assumptions, and
+              results visible enough to audit later.
+            </p>
+          </article>
+          <article>
+            <h3>Local-first apps</h3>
+            <p>
+              Interfaces that run close to the files, media, or hardware they
+              manage, with simple deployment paths.
+            </p>
+          </article>
+          <article>
+            <h3>Automation glue</h3>
+            <p>
+              Practical command-line and browser workflows that remove repeated
+              manual steps without hiding what happened.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section alt" id="repos" aria-labelledby="repos-title">
+        <div class="section-heading">
+          <p class="eyebrow">Public repository index</p>
+          <h2 id="repos-title">Open work on GitHub</h2>
+        </div>
+        <div class="repo-grid">
+          <article class="repo-card">
+            <div>
+              <p class="repo-meta">CSS</p>
+              <h3><a href="https://github.com/BlankMediator/abdullahhussain.com.au-build">abdullahhussain.com.au-build</a></h3>
+              <p>Final static build for this website.</p>
+            </div>
+            <span>Updated Jul 2026</span>
+          </article>
+          <article class="repo-card feature">
+            <div>
+              <p class="repo-meta">Python</p>
+              <h3><a href="https://github.com/BlankMediator/QuantBot">QuantBot</a></h3>
+              <p>Educational multifactor quant trading system with static docs and reproducible research outputs.</p>
+            </div>
+            <span>Updated Jul 2026</span>
+          </article>
+          <article class="repo-card">
+            <div>
+              <p class="repo-meta">CSS</p>
+              <h3><a href="https://github.com/BlankMediator/blankmediator.github.io">blankmediator.github.io</a></h3>
+              <p>Public profile site source for the BlankMediator account.</p>
+            </div>
+            <span>Updated Jul 2026</span>
+          </article>
+          <article class="repo-card">
+            <div>
+              <p class="repo-meta">JavaScript</p>
+              <h3><a href="https://github.com/BlankMediator/assabile-local">assabile-local</a></h3>
+              <p>Local media and browsing tools for working with Assabile content.</p>
+            </div>
+            <span>Updated Jul 2026</span>
+          </article>
+          <article class="repo-card">
+            <div>
+              <p class="repo-meta">Python</p>
+              <h3><a href="https://github.com/BlankMediator/youtube-transcript-extractor">youtube-transcript-extractor</a></h3>
+              <p>Utility scripts for extracting and handling YouTube transcript text.</p>
+            </div>
+            <span>Updated Jun 2026</span>
+          </article>
+          <article class="repo-card">
+            <div>
+              <p class="repo-meta">Python</p>
+              <h3><a href="https://github.com/BlankMediator/crescent-visibility">crescent-visibility</a></h3>
+              <p>Code experiments around crescent visibility calculations.</p>
+            </div>
+            <span>Updated Mar 2025</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Find the public work or get in touch</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/BlankMediator">GitHub profile</a>
+          <a href="mailto:hello@abdullahhussain.com.au">Email</a>
         </div>
       </section>
     </main>
 
     <footer>
       <span>abdullahhussain.com.au</span>
-      <span>Built on GitHub Pages</span>
+      <span>Abdullah Hussain</span>
     </footer>
   </body>
 </html>
