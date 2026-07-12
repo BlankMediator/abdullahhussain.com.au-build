@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Transcript Extractor | Abdullah Hussain</title>
+    <meta name="description" content="Browser-native transcript parsing, formatting, copying, and download tools.">
+    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+  </head>
+  <body data-project-app="transcript">
+    <header class="site-header">
+      <a class="brand" href="../">Abdullah Hussain</a>
+      <nav aria-label="Primary">
+        <a href="../#work">Work</a>
+        <a href="../#repos">Repos</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="project-page">
+      <section class="project-hero">
+        <p class="eyebrow">youtube-transcript-extractor</p>
+        <h1>Transcript formatter and bookmarklet</h1>
+        <p class="lede">The browser cannot inspect a separate YouTube tab from this site, so the optimum static version is a local formatter plus a bookmarklet that runs on the video page where the transcript exists.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/BlankMediator/youtube-transcript-extractor">Open repo</a>
+          <a class="button" id="bookmarklet-link" href="#">Transcript bookmarklet</a>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <div class="tool-grid">
+          <label>
+            <span>Transcript rows</span>
+            <textarea id="transcript-input" spellcheck="false"></textarea>
+          </label>
+          <label>
+            <span>Formatted output</span>
+            <textarea id="transcript-output" spellcheck="false" readonly></textarea>
+          </label>
+        </div>
+        <div class="toolbar-row">
+          <label class="inline-check"><input type="checkbox" id="include-time" checked> Include timestamps</label>
+          <button class="button" type="button" id="load-sample">Sample</button>
+          <button class="button primary" type="button" id="parse-transcript">Parse</button>
+          <button class="button" type="button" id="copy-transcript">Copy</button>
+          <button class="button" type="button" id="download-transcript-txt">TXT</button>
+          <button class="button" type="button" id="download-transcript-json">JSON</button>
+        </div>
+        <p class="status-line" id="transcript-status"></p>
+      </section>
+    </main>
+    <script src="project-app.js?v=20260713-projects"></script>
+  </body>
+</html>

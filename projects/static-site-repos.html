@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Static Site Repositories | Abdullah Hussain</title>
+    <meta name="description" content="The browser-first deployment structure for Abdullah Hussain's static site repositories.">
+    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+  </head>
+  <body data-project-app="staticRepo">
+    <header class="site-header">
+      <a class="brand" href="../">Abdullah Hussain</a>
+      <nav aria-label="Primary">
+        <a href="../#work">Work</a>
+        <a href="../#repos">Repos</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="project-page">
+      <section class="project-hero">
+        <p class="eyebrow">static website repos</p>
+        <h1>Private source, public build artifact</h1>
+        <p class="lede">The website repos do not need Python migration. Their optimum browser shape is static HTML, CSS, and JavaScript, with the final public build separated from the private working source.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/BlankMediator/abdullahhussain.com.au-build">Open deploy build</a>
+          <a class="button" href="https://github.com/BlankMediator/blankmediator.github.io">Open account site repo</a>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reusable build idea</p>
+            <h2>Publish only final static files</h2>
+          </div>
+          <button class="button" type="button" id="copy-action-yaml">Copy workflow</button>
+        </div>
+        <pre><code id="action-yaml">name: Build static site
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy browser files
+        run: mkdir -p dist && cp -R index.html styles.css projects dist/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist</code></pre>
+      </section>
+    </main>
+    <script src="project-app.js?v=20260713-projects"></script>
+  </body>
+</html>

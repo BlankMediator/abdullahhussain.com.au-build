@@ -308,6 +308,208 @@ dd {
   font-weight: 800;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-tile {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.project-tile strong {
+  color: var(--blue);
+  font-size: 1.05rem;
+}
+
+.project-tile span,
+.status-line,
+.empty-note {
+  color: var(--muted);
+}
+
+.project-page {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.project-hero {
+  min-height: 42vh;
+  display: grid;
+  align-content: center;
+  padding: 58px 0 42px;
+}
+
+.project-hero h1 {
+  max-width: 900px;
+  font-size: 4rem;
+}
+
+.tool-panel {
+  margin-bottom: 78px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.result-metrics,
+.model-results,
+.mini-grid,
+.tool-grid,
+.control-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.result-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.result-metrics div,
+.model-results div,
+.mini-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.result-metrics strong,
+.model-results strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.result-metrics span,
+.model-results span {
+  display: block;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+#equity-canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  color: var(--teal-dark);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.tool-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+label span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal-dark);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+input,
+select {
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+textarea {
+  min-height: 280px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.inline-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+}
+
+.inline-check input {
+  width: auto;
+  min-height: auto;
+}
+
+.control-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.control-grid.compact {
+  grid-template-columns: minmax(0, 1fr) 220px;
+}
+
+.model-results {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.mini-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.text-link {
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
 .contact-section {
   display: flex;
   align-items: center;
@@ -349,7 +551,11 @@ footer {
   .hero,
   .summary-band,
   .work-grid,
-  .repo-grid {
+  .repo-grid,
+  .project-grid,
+  .result-metrics,
+  .model-results,
+  .mini-grid {
     grid-template-columns: 1fr;
   }
 
@@ -362,6 +568,16 @@ footer {
   h1 {
     font-size: 3.5rem;
   }
+
+  .project-hero h1 {
+    font-size: 3rem;
+  }
+
+  .tool-grid,
+  .control-grid,
+  .control-grid.compact {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -370,7 +586,8 @@ footer {
   .hero,
   .summary-band,
   .content-section,
-  .contact-section {
+  .contact-section,
+  .project-page {
     width: min(100% - 28px, 1120px);
   }
 
@@ -407,5 +624,17 @@ footer {
 
   .contact-links {
     justify-content: stretch;
+  }
+
+  .project-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .tool-panel {
+    padding: 18px;
+  }
+
+  .toolbar-row .button {
+    width: auto;
   }
 }

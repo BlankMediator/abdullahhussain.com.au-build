@@ -9,7 +9,7 @@
       content="Abdullah Hussain's personal site for software projects, research tools, and working notes."
     >
     <link rel="canonical" href="https://abdullahhussain.com.au/">
-    <link rel="stylesheet" href="styles.css?v=20260712-full">
+    <link rel="stylesheet" href="styles.css?v=20260713-projects">
   </head>
   <body>
     <header class="site-header">
@@ -17,6 +17,7 @@
       <nav aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#repos">Repos</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -32,7 +33,8 @@
             reports, and repeatable processes.
           </p>
           <div class="actions" aria-label="Primary links">
-            <a class="button primary" href="#repos">View public repos</a>
+            <a class="button primary" href="#projects">Open browser tools</a>
+            <a class="button" href="#repos">View public repos</a>
             <a class="button" href="https://github.com/BlankMediator">Open GitHub profile</a>
           </div>
         </div>
@@ -118,7 +120,7 @@
               <h3><a href="https://github.com/BlankMediator/abdullahhussain.com.au-build">abdullahhussain.com.au-build</a></h3>
               <p>Final static build for this website.</p>
             </div>
-            <span>Updated Jul 2026</span>
+            <span><a href="projects/static-site-repos.html">Static build notes</a></span>
           </article>
           <article class="repo-card feature">
             <div>
@@ -126,7 +128,7 @@
               <h3><a href="https://github.com/BlankMediator/QuantBot">QuantBot</a></h3>
               <p>Educational multifactor quant trading system with static docs and reproducible research outputs.</p>
             </div>
-            <span>Updated Jul 2026</span>
+            <span><a href="projects/quantbot.html">Open browser report</a></span>
           </article>
           <article class="repo-card">
             <div>
@@ -134,7 +136,7 @@
               <h3><a href="https://github.com/BlankMediator/blankmediator.github.io">blankmediator.github.io</a></h3>
               <p>Public profile site source for the BlankMediator account.</p>
             </div>
-            <span>Updated Jul 2026</span>
+            <span><a href="projects/static-site-repos.html">Static site notes</a></span>
           </article>
           <article class="repo-card">
             <div>
@@ -142,7 +144,7 @@
               <h3><a href="https://github.com/BlankMediator/assabile-local">assabile-local</a></h3>
               <p>Local media and browsing tools for working with Assabile content.</p>
             </div>
-            <span>Updated Jul 2026</span>
+            <span><a href="projects/assabile-local.html">Open catalogue page</a></span>
           </article>
           <article class="repo-card">
             <div>
@@ -150,7 +152,7 @@
               <h3><a href="https://github.com/BlankMediator/youtube-transcript-extractor">youtube-transcript-extractor</a></h3>
               <p>Utility scripts for extracting and handling YouTube transcript text.</p>
             </div>
-            <span>Updated Jun 2026</span>
+            <span><a href="projects/youtube-transcript-extractor.html">Open transcript tool</a></span>
           </article>
           <article class="repo-card">
             <div>
@@ -158,8 +160,37 @@
               <h3><a href="https://github.com/BlankMediator/crescent-visibility">crescent-visibility</a></h3>
               <p>Code experiments around crescent visibility calculations.</p>
             </div>
-            <span>Updated Mar 2025</span>
+            <span><a href="projects/crescent-visibility.html">Open model explorer</a></span>
           </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Browser-ready migrations</p>
+          <h2 id="projects-title">Each repo gets its own static route</h2>
+        </div>
+        <div class="project-grid">
+          <a class="project-tile" href="projects/quantbot.html">
+            <strong>QuantBot</strong>
+            <span>Precomputed Python outputs rendered as browser charts and tables.</span>
+          </a>
+          <a class="project-tile" href="projects/assabile-local.html">
+            <strong>Assabile Local</strong>
+            <span>Generated metadata catalogue with search and source links.</span>
+          </a>
+          <a class="project-tile" href="projects/youtube-transcript-extractor.html">
+            <strong>YouTube Transcript Extractor</strong>
+            <span>Browser formatter plus bookmarklet for same-tab extraction.</span>
+          </a>
+          <a class="project-tile" href="projects/crescent-visibility.html">
+            <strong>Crescent Visibility</strong>
+            <span>Visibility thresholds rewritten as client-side JavaScript.</span>
+          </a>
+          <a class="project-tile" href="projects/static-site-repos.html">
+            <strong>Website Repos</strong>
+            <span>Static build separation for public deploy artifacts.</span>
+          </a>
         </div>
       </section>
 

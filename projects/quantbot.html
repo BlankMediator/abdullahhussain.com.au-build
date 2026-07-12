@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuantBot Browser Report | Abdullah Hussain</title>
+    <meta name="description" content="A static browser report for QuantBot outputs and generated research artifacts.">
+    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+  </head>
+  <body data-project-app="quantbot">
+    <header class="site-header">
+      <a class="brand" href="../">Abdullah Hussain</a>
+      <nav aria-label="Primary">
+        <a href="../#work">Work</a>
+        <a href="../#repos">Repos</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="project-page">
+      <section class="project-hero">
+        <p class="eyebrow">QuantBot</p>
+        <h1>Static quant research viewer</h1>
+        <p class="lede">The Python engine stays as a reproducible research pipeline. The browser page reads precomputed CSV/JSON artifacts, renders metrics, and lets visitors inspect results without running Python locally.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/BlankMediator/QuantBot">Open repo</a>
+          <button class="button" id="quant-download" type="button">Download sample report</button>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Generated artifact path</p>
+            <h2>Precompute with Actions, explore in the browser</h2>
+          </div>
+        </div>
+        <div class="result-metrics" id="quant-metrics">
+          <div><strong data-metric="total_return"></strong><span>Total return</span></div>
+          <div><strong data-metric="annualized_return"></strong><span>Annualized return</span></div>
+          <div><strong data-metric="benchmark_total_return"></strong><span>Benchmark return</span></div>
+          <div><strong data-metric="information_ratio"></strong><span>Information ratio</span></div>
+        </div>
+        <canvas id="equity-canvas" width="980" height="360" aria-label="Equity curve chart"></canvas>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Factor</th><th>Weight</th><th>Spread return</th><th>Hit rate</th></tr></thead>
+            <tbody id="factor-table"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="project-app.js?v=20260713-projects"></script>
+  </body>
+</html>

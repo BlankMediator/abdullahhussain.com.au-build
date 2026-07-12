@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crescent Visibility | Abdullah Hussain</title>
+    <meta name="description" content="Browser-side crescent visibility model comparison inspired by the Python repo.">
+    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+  </head>
+  <body data-project-app="crescent">
+    <header class="site-header">
+      <a class="brand" href="../">Abdullah Hussain</a>
+      <nav aria-label="Primary">
+        <a href="../#work">Work</a>
+        <a href="../#repos">Repos</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="project-page">
+      <section class="project-hero">
+        <p class="eyebrow">crescent-visibility</p>
+        <h1>Browser visibility model explorer</h1>
+        <p class="lede">The Python models were rewritten as client-side JavaScript so visitors can compare Ilyas, Yallop, Odeh, Shaukat, and SAAO-style labels without a server.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/BlankMediator/crescent-visibility">Open repo</a>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <form class="control-grid" id="crescent-form">
+          <label><span>Latitude</span><input name="lat" type="number" step="0.0001" value="-37.8136"></label>
+          <label><span>Longitude</span><input name="lon" type="number" step="0.0001" value="144.9631"></label>
+          <label><span>Date</span><input name="date" type="date" value="2025-03-30"></label>
+          <label><span>UTC time</span><input name="time" type="time" value="08:00"></label>
+          <button class="button primary" type="submit">Calculate</button>
+        </form>
+        <div id="crescent-result"></div>
+        <p class="status-line">This browser version uses an approximate astronomical estimator plus the repo's visibility decision thresholds. The Python/Skyfield workflow remains the source for high-precision ephemeris runs.</p>
+      </section>
+    </main>
+    <script src="project-app.js?v=20260713-projects"></script>
+  </body>
+</html>

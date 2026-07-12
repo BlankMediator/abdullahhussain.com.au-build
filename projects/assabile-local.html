@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assabile Local Browser Catalogue | Abdullah Hussain</title>
+    <meta name="description" content="A static catalogue preview for Assabile Local's browser-capable surface.">
+    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+  </head>
+  <body data-project-app="assabile">
+    <header class="site-header">
+      <a class="brand" href="../">Abdullah Hussain</a>
+      <nav aria-label="Primary">
+        <a href="../#work">Work</a>
+        <a href="../#repos">Repos</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="project-page">
+      <section class="project-hero">
+        <p class="eyebrow">assabile-local</p>
+        <h1>Static catalogue browser</h1>
+        <p class="lede">The local Python server remains best for syncing, caching, and ZIP downloads. The website version is a static catalogue/search surface fed by generated metadata and direct source links.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/BlankMediator/assabile-local">Open repo</a>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <div class="control-grid compact">
+          <label><span>Search</span><input id="assabile-search" type="search" autocomplete="off" spellcheck="false" placeholder="sudais, egypt, video..."></label>
+          <label><span>Kind</span><select id="assabile-kind"><option value="all">All</option><option value="recitation">Recitation</option><option value="anasheed">Anasheed</option><option value="videoLesson">Video lessons</option><option value="teacher">Teacher</option></select></label>
+        </div>
+        <p class="status-line" id="assabile-count"></p>
+        <div class="mini-grid" id="assabile-results"></div>
+      </section>
+    </main>
+    <script src="project-app.js?v=20260713-projects"></script>
+  </body>
+</html>
