@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assabile Local Browser Catalogue | Abdullah Hussain</title>
-    <meta name="description" content="A static catalogue preview for Assabile Local's browser-capable surface.">
+    <title>Assabile Local | Abdullah Hussain</title>
+    <meta name="description" content="Assabile Local static app link and repo-derived catalogue notes.">
     <link rel="stylesheet" href="../styles.css?v=20260714-comprehensive">
   </head>
   <body data-project-app="assabile">
@@ -19,13 +19,33 @@
     <main class="project-page">
       <section class="project-hero">
         <p class="eyebrow">assabile-local</p>
-        <h1>Static catalogue browser</h1>
-        <p class="lede">The local Python server remains best for syncing, caching, and ZIP downloads. The website version is a static catalogue/search surface fed by generated metadata and direct source links.</p>
+        <h1>Working static media browser</h1>
+        <p class="lede">The real browser app already runs as its own static site, with catalogue browsing, profile views, search, docs, and indexed media playback. This page now points to that working app first and keeps the repo-derived catalogue snapshot below as context.</p>
         <div class="actions">
-          <a class="button primary" href="https://github.com/BlankMediator/assabile-local">Open repo</a>
+          <a class="button primary" href="https://blankmediator.github.io/assabile-local/">Launch Assabile Local</a>
+          <a class="button" href="https://github.com/BlankMediator/assabile-local">Open repo</a>
         </div>
       </section>
       <section class="tool-panel">
+        <div class="split-panel">
+          <div>
+            <p class="eyebrow">Live app</p>
+            <h2>Use the full static build</h2>
+            <p>The separate Assabile Local site is the correct browser experience: it loads the full app shell, catalogue, profile panels, documentation, and static playback metadata.</p>
+            <div class="actions footer-actions">
+              <a class="button primary" href="https://blankmediator.github.io/assabile-local/">Open working app</a>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Boundary</p>
+            <h2>What still needs Python locally</h2>
+            <ul class="compact-list">
+              <li>Fresh metadata syncs.</li>
+              <li>Local cache writes and download management.</li>
+              <li>ZIP assembly and server-side utility actions.</li>
+            </ul>
+          </div>
+        </div>
         <p class="status-line" id="assabile-generated">Loading generated catalogue...</p>
         <div class="result-metrics" id="assabile-metrics"></div>
         <div class="split-panel">
@@ -34,11 +54,11 @@
             <div class="bar-list" id="country-bars"></div>
           </div>
           <div>
-            <h2>Static/browser boundary</h2>
+            <h2>Snapshot notes</h2>
             <ul class="compact-list">
-              <li>Search, filtering, profile links, and media counts run from generated JSON.</li>
-              <li>Direct public media links can open in the browser when present in source metadata.</li>
-              <li>Fresh sync, local cache writes, and ZIP assembly remain local-server jobs.</li>
+              <li>This section is a compact repo-derived snapshot for the portfolio page.</li>
+              <li>The full app above is the canonical browser version.</li>
+              <li>Profile links below open the original source pages.</li>
             </ul>
           </div>
         </div>
