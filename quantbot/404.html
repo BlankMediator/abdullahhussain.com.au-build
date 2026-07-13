@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quant Factor Bot Docs</title>
+  <link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#doc=README.md" aria-label="Quant Factor Bot home">
+      <span class="brand-mark">Q</span>
+      <span>
+        <strong>Quant Factor Bot</strong>
+        <small>Static Site</small>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Site sections">
+      <a href="#docs">Docs</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#run-local">Run Local</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="overview" aria-labelledby="overviewTitle">
+      <div class="overview-copy">
+        <p class="eyebrow">Static project site</p>
+        <h1 id="overviewTitle">Quant research docs, workflow map, and runbook.</h1>
+        <p class="lede">A static build of the repository documentation. The live Python Control Room still runs locally or on a real server.</p>
+        <div class="actions">
+          <a class="button primary" href="#doc=README.md">README</a>
+          <a class="button" href="#doc=docs/RUNBOOK.md">Runbook</a>
+          <a class="button" href="#doc=docs/CLI_REFERENCE.md">CLI</a>
+        </div>
+      </div>
+      <div class="pipeline-panel" aria-label="QuantBot pipeline visual">
+        <canvas id="pipelineCanvas" width="720" height="420"></canvas>
+        <div class="pipeline-steps">
+          <span>Data</span>
+          <span>Signals</span>
+          <span>Alpha</span>
+          <span>Risk</span>
+          <span>QP</span>
+          <span>Logs</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-band" id="workflow" aria-labelledby="workflowTitle">
+      <div>
+        <p class="eyebrow">Repository workflow</p>
+        <h2 id="workflowTitle">Yahoo Finance data into reproducible factor backtests.</h2>
+      </div>
+      <div class="workflow-grid">
+        <div class="workflow-item">
+          <strong>1. Download</strong>
+          <code>quantbot download-yfinance-rich</code>
+        </div>
+        <div class="workflow-item">
+          <strong>2. Backtest</strong>
+          <code>quantbot backtest --config configs/default.yaml</code>
+        </div>
+        <div class="workflow-item">
+          <strong>3. Inspect</strong>
+          <code>quantbot inspect-run --run runs/yfinance</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-shell" id="docs" aria-labelledby="docsTitle">
+      <aside class="doc-sidebar">
+        <div class="sidebar-head">
+          <p class="eyebrow">Docs</p>
+          <h2 id="docsTitle">Library</h2>
+        </div>
+        <label class="search-field">
+          <span>Search</span>
+          <input id="docSearch" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </label>
+        <div id="docList" class="doc-list" aria-label="Documentation pages"></div>
+      </aside>
+
+      <article class="doc-reader">
+        <div class="reader-toolbar">
+          <select id="docSelect" aria-label="Select documentation page"></select>
+          <a id="rawDocLink" class="button small" href="README.md">Markdown</a>
+        </div>
+        <div id="docMeta" class="doc-meta"></div>
+        <div id="docContent" class="doc-content"></div>
+      </article>
+    </section>
+
+    <section class="run-local" id="run-local" aria-labelledby="runLocalTitle">
+      <div>
+        <p class="eyebrow">Live Control Room</p>
+        <h2 id="runLocalTitle">Run the Python dashboard outside the static site.</h2>
+      </div>
+      <pre><code>python -m pip install -e ".[dev,real-data,qp]"
+quantbot serve --host 127.0.0.1 --port 8000</code></pre>
+    </section>
+  </main>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script src="assets/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+{
+  "docs": [
+    {
+      "path": "README.md",
+      "title": "Quant Factor Bot",
+      "summary": "Codex-ready educational multifactor quant trading system modeled on a production quant-dev pipeline:",
+      "bytes": 11693
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "title": "Architecture",
+      "summary": "Related docs: [Documentation Contents](docs/CONTENTS.md), [CLI Command Reference](docs/CLI_REFERENCE.md), [Math Reference](docs/MATH.md), [Worked Examples](docs/WORKED_EXAMPLES.md), [Factor Math Guide](docs/FACTORS.md), ",
+      "bytes": 6328
+    },
+    {
+      "path": "docs/ASX_ANALYSIS.md",
+      "title": "ASX Analysis Guide",
+      "summary": "This guide documents the ASX workflow added for the requested analysis:",
+      "bytes": 11612
+    },
+    {
+      "path": "docs/ASX_REIT_BACKTESTS.md",
+      "title": "ASX REIT Backtests",
+      "summary": "This note documents the ASX REIT work requested after the main ASX segmented alpha analysis:",
+      "bytes": 8374
+    },
+    {
+      "path": "docs/CLI_REFERENCE.md",
+      "title": "CLI Command Reference",
+      "summary": "[Back to Documentation Contents](docs/CONTENTS.md#cli-reference) | [Runbook](docs/RUNBOOK.md) | [Config Reference](docs/CONFIG.md) | [Python Module Reference](docs/PYTHON_REFERENCE.md)",
+      "bytes": 15365
+    },
+    {
+      "path": "docs/CONFIG.md",
+      "title": "Config YAML Reference",
+      "summary": "[Back to Documentation Contents](docs/CONTENTS.md#configuration) | [Math Reference](docs/MATH.md) | [Factor Math Guide](docs/FACTORS.md) | [Worked Examples](docs/WORKED_EXAMPLES.md) | [Glossary](docs/GLOSSARY.md)",
+      "bytes": 14540
+    },
+    {
+      "path": "docs/CONTENTS.md",
+      "title": "Documentation Contents",
+      "summary": "Use this page as the project map. Links work in the browser Docs tab and in normal Markdown viewers.",
+      "bytes": 7823
+    },
+    {
+      "path": "docs/FACTORS.md",
+      "title": "Factor Math Guide",
+      "summary": "This guide documents each normalized factor built by `src/quantbot/factors/signals.py`, how its math works, and how it flows into alpha. For the full pipeline equations, see the [Math Reference](docs/MATH.md). For code o",
+      "bytes": 20105
+    },
+    {
+      "path": "docs/GITHUB_PAGES.md",
+      "title": "Static Hosting",
+      "summary": "QuantBot now has a static build for the repository docs. It publishes a browsable project site with `README.md`, `docs/*.md`, the workflow map, and the local Control Room command.",
+      "bytes": 1472
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "title": "Glossary",
+      "summary": "[Back to Documentation Contents](docs/CONTENTS.md#glossary) | [Math Reference](docs/MATH.md) | [Factor Math Guide](docs/FACTORS.md) | [Worked Examples](docs/WORKED_EXAMPLES.md) | [Config Reference](docs/CONFIG.md)",
+      "bytes": 5016
+    },
+    {
+      "path": "docs/MATH.md",
+      "title": "Quant Factor Bot Math Reference",
+      "summary": "This page records the equations behind the CSV variables and run logs. Display equations use LaTeX delimiters so the browser docs tab can render them as math blocks.",
+      "bytes": 13486
+    },
+    {
+      "path": "docs/PYTHON_REFERENCE.md",
+      "title": "Python Module Reference",
+      "summary": "This reference documents every `.py` file under `src/quantbot`, including subdirectories. It is meant to answer three practical questions for each module: what it owns, what it exposes, and what to be careful about when ",
+      "bytes": 23581
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "title": "Quant Factor Bot Runbook",
+      "summary": "Related docs: [Documentation Contents](docs/CONTENTS.md), [CLI Command Reference](docs/CLI_REFERENCE.md), [ASX Analysis Guide](docs/ASX_ANALYSIS.md), [Architecture](docs/ARCHITECTURE.md), [Math Reference](docs/MATH.md), ",
+      "bytes": 14912
+    },
+    {
+      "path": "docs/US_REIT_BACKTESTS.md",
+      "title": "US REIT Backtests",
+      "summary": "This note documents the US version of the REIT workflow:",
+      "bytes": 8376
+    },
+    {
+      "path": "docs/VIDEO_BLUEPRINT.md",
+      "title": "Video Blueprint",
+      "summary": "This project is based on the transcript in `D:\\tzTftCzmr7k.txt`, a quant-developer walkthrough centered on a production-style multifactor equity trading system. The transcript repeats after the first full pass, so the fi",
+      "bytes": 4872
+    },
+    {
+      "path": "docs/WORKED_EXAMPLES.md",
+      "title": "Worked Examples For Every Equation",
+      "summary": "[Back to Documentation Contents](docs/CONTENTS.md#worked-examples) | [Math Reference](docs/MATH.md) | [Factor Math Guide](docs/FACTORS.md) | [Config Reference](docs/CONFIG.md) | [Glossary](docs/GLOSSARY.md)",
+      "bytes": 11842
+    }
+  ]
+}
