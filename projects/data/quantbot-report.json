@@ -1,0 +1,1592 @@
+{
+  "sourceRepo": "https://github.com/BlankMediator/QuantBot",
+  "artifact": "runs/test_fixture",
+  "summary": {
+    "total_return": 0.1674867419,
+    "annualized_return": 0.3470080078,
+    "annualized_volatility": 0.0054759051,
+    "max_drawdown": 0.0,
+    "benchmark_total_return": 0.169749974,
+    "annualized_active_return": -0.0001278324,
+    "annualized_active_risk": 9.08729e-05,
+    "information_ratio": -1.4067159045,
+    "average_turnover": 2.19e-08,
+    "implementation_shortfall_total": 7e-10,
+    "rebalance_count": 14.0,
+    "no_cost_total_return": 0.1674867427,
+    "no_cost_annualized_return": 0.3470080096,
+    "no_cost_annualized_volatility": 0.0054759051,
+    "no_cost_max_drawdown": 0.0,
+    "no_cost_information_ratio": -1.4067008035,
+    "cost_drag_total_return": 8e-10,
+    "cost_drag_annualized_return": 1.9e-09,
+    "average_active_gross_exposure": 0.0092528989,
+    "average_ex_ante_tracking_error": 0.0001414421
+  },
+  "equity": [
+    {
+      "date": "2021-03-02",
+      "equity": 1001872.05,
+      "benchmark": 1001872.05,
+      "turnover": 0.0,
+      "rebalanced": true,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-03",
+      "equity": 1003808.51,
+      "benchmark": 1003806.4,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-04",
+      "equity": 1005790.55,
+      "benchmark": 1005784.72,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-05",
+      "equity": 1007799.87,
+      "benchmark": 1007789.18,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-08",
+      "equity": 1009819.88,
+      "benchmark": 1009803.67,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-09",
+      "equity": 1011832.92,
+      "benchmark": 1011810.88,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-10",
+      "equity": 1013824.63,
+      "benchmark": 1013796.75,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-11",
+      "equity": 1015782.33,
+      "benchmark": 1015748.71,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-12",
+      "equity": 1017695.22,
+      "benchmark": 1017655.98,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-15",
+      "equity": 1019555.63,
+      "benchmark": 1019510.82,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0
+    },
+    {
+      "date": "2021-03-16",
+      "equity": 1021355.02,
+      "benchmark": 1021304.51,
+      "turnover": 1.1e-07,
+      "rebalanced": true,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-17",
+      "equity": 1023091.37,
+      "benchmark": 1023034.82,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-18",
+      "equity": 1024762.75,
+      "benchmark": 1024699.61,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-19",
+      "equity": 1026370.16,
+      "benchmark": 1026299.74,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-22",
+      "equity": 1027915.12,
+      "benchmark": 1027836.63,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-23",
+      "equity": 1029402.54,
+      "benchmark": 1029315.23,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-24",
+      "equity": 1030838.62,
+      "benchmark": 1030741.9,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-25",
+      "equity": 1032229.98,
+      "benchmark": 1032123.55,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-26",
+      "equity": 1033584.86,
+      "benchmark": 1033468.8,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-29",
+      "equity": 1034912.02,
+      "benchmark": 1034786.9,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00012352
+    },
+    {
+      "date": "2021-03-30",
+      "equity": 1036219.64,
+      "benchmark": 1036086.53,
+      "turnover": 7e-08,
+      "rebalanced": true,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-03-31",
+      "equity": 1037515.81,
+      "benchmark": 1037376.31,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-01",
+      "equity": 1038810.4,
+      "benchmark": 1038666.57,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-02",
+      "equity": 1040108.92,
+      "benchmark": 1039963.16,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-05",
+      "equity": 1041419.02,
+      "benchmark": 1041273.92,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-06",
+      "equity": 1042744.72,
+      "benchmark": 1042602.97,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-07",
+      "equity": 1044090.55,
+      "benchmark": 1043954.68,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-08",
+      "equity": 1045457.96,
+      "benchmark": 1045330.25,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-09",
+      "equity": 1046849.15,
+      "benchmark": 1046731.49,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-12",
+      "equity": 1048261.18,
+      "benchmark": 1048154.96,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.0002682
+    },
+    {
+      "date": "2021-04-13",
+      "equity": 1049692.63,
+      "benchmark": 1049598.71,
+      "turnover": 3.2e-07,
+      "rebalanced": true,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-14",
+      "equity": 1051139.89,
+      "benchmark": 1051058.6,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-15",
+      "equity": 1052597.5,
+      "benchmark": 1052528.67,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-16",
+      "equity": 1054058.22,
+      "benchmark": 1054001.28,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-19",
+      "equity": 1055517.14,
+      "benchmark": 1055471.26,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-20",
+      "equity": 1056964.58,
+      "benchmark": 1056928.72,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-21",
+      "equity": 1058393.8,
+      "benchmark": 1058366.9,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-22",
+      "equity": 1059796.15,
+      "benchmark": 1059777.2,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-23",
+      "equity": 1061164.61,
+      "benchmark": 1061152.73,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-26",
+      "equity": 1062489.99,
+      "benchmark": 1062484.47,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00023709
+    },
+    {
+      "date": "2021-04-27",
+      "equity": 1063768.09,
+      "benchmark": 1063768.4,
+      "turnover": 1.1e-07,
+      "rebalanced": true,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-04-28",
+      "equity": 1064992.22,
+      "benchmark": 1064997.97,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-04-29",
+      "equity": 1066158.28,
+      "benchmark": 1066169.2,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-04-30",
+      "equity": 1067264.48,
+      "benchmark": 1067280.28,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-03",
+      "equity": 1068308.39,
+      "benchmark": 1068328.74,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-04",
+      "equity": 1069290.59,
+      "benchmark": 1069314.98,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-05",
+      "equity": 1070213.74,
+      "benchmark": 1070241.44,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-06",
+      "equity": 1071081.4,
+      "benchmark": 1071111.45,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-07",
+      "equity": 1071899.07,
+      "benchmark": 1071930.22,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-10",
+      "equity": 1072673.1,
+      "benchmark": 1072703.87,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 9.942e-05
+    },
+    {
+      "date": "2021-05-11",
+      "equity": 1073411.13,
+      "benchmark": 1073439.87,
+      "turnover": 5e-07,
+      "rebalanced": true,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-12",
+      "equity": 1074123.69,
+      "benchmark": 1074148.68,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-13",
+      "equity": 1074819.81,
+      "benchmark": 1074839.4,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-14",
+      "equity": 1075510.17,
+      "benchmark": 1075522.89,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-17",
+      "equity": 1076205.63,
+      "benchmark": 1076210.32,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-18",
+      "equity": 1076917.22,
+      "benchmark": 1076913.16,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-19",
+      "equity": 1077656.04,
+      "benchmark": 1077643.01,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-20",
+      "equity": 1078431.49,
+      "benchmark": 1078409.84,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-21",
+      "equity": 1079252.72,
+      "benchmark": 1079223.34,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-24",
+      "equity": 1080129.74,
+      "benchmark": 1080094.0,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 5.599e-05
+    },
+    {
+      "date": "2021-05-25",
+      "equity": 1081067.49,
+      "benchmark": 1081027.11,
+      "turnover": 4.2e-07,
+      "rebalanced": true,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-05-26",
+      "equity": 1082071.67,
+      "benchmark": 1082028.6,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-05-27",
+      "equity": 1083147.51,
+      "benchmark": 1083103.76,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-05-28",
+      "equity": 1084296.04,
+      "benchmark": 1084253.49,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-05-31",
+      "equity": 1085517.59,
+      "benchmark": 1085477.83,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-01",
+      "equity": 1086811.58,
+      "benchmark": 1086775.76,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-02",
+      "equity": 1088174.12,
+      "benchmark": 1088142.89,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-03",
+      "equity": 1089601.06,
+      "benchmark": 1089574.51,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-04",
+      "equity": 1091085.84,
+      "benchmark": 1091063.52,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-07",
+      "equity": 1092621.21,
+      "benchmark": 1092602.24,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00024295
+    },
+    {
+      "date": "2021-06-08",
+      "equity": 1094199.64,
+      "benchmark": 1094182.79,
+      "turnover": 9e-08,
+      "rebalanced": true,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-09",
+      "equity": 1095810.56,
+      "benchmark": 1095794.49,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-10",
+      "equity": 1097444.96,
+      "benchmark": 1097428.32,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-11",
+      "equity": 1099093.03,
+      "benchmark": 1099074.69,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-14",
+      "equity": 1100743.81,
+      "benchmark": 1100722.99,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-15",
+      "equity": 1102388.59,
+      "benchmark": 1102365.02,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-16",
+      "equity": 1104018.1,
+      "benchmark": 1103992.02,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-17",
+      "equity": 1105624.32,
+      "benchmark": 1105596.52,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-18",
+      "equity": 1107199.7,
+      "benchmark": 1107171.45,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-21",
+      "equity": 1108738.25,
+      "benchmark": 1108711.21,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00014379
+    },
+    {
+      "date": "2021-06-22",
+      "equity": 1110235.6,
+      "benchmark": 1110211.63,
+      "turnover": 1.7e-07,
+      "rebalanced": true,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-23",
+      "equity": 1111689.21,
+      "benchmark": 1111670.19,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-24",
+      "equity": 1113097.08,
+      "benchmark": 1113084.74,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-25",
+      "equity": 1114458.95,
+      "benchmark": 1114454.64,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-28",
+      "equity": 1115777.79,
+      "benchmark": 1115782.38,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-29",
+      "equity": 1117055.39,
+      "benchmark": 1117069.11,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-06-30",
+      "equity": 1118296.87,
+      "benchmark": 1118319.32,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-07-01",
+      "equity": 1119507.52,
+      "benchmark": 1119537.64,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-07-02",
+      "equity": 1120694.46,
+      "benchmark": 1120730.63,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-07-05",
+      "equity": 1121863.93,
+      "benchmark": 1121904.15,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00015491
+    },
+    {
+      "date": "2021-07-06",
+      "equity": 1123024.15,
+      "benchmark": 1123066.16,
+      "turnover": 1.5e-07,
+      "rebalanced": true,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-07",
+      "equity": 1124183.63,
+      "benchmark": 1124225.18,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-08",
+      "equity": 1125349.19,
+      "benchmark": 1125388.24,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-09",
+      "equity": 1126529.01,
+      "benchmark": 1126563.95,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-12",
+      "equity": 1127729.2,
+      "benchmark": 1127759.0,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-13",
+      "equity": 1128956.17,
+      "benchmark": 1128980.51,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-14",
+      "equity": 1130215.06,
+      "benchmark": 1130234.36,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-15",
+      "equity": 1131509.2,
+      "benchmark": 1131524.61,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-16",
+      "equity": 1132840.87,
+      "benchmark": 1132854.17,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-19",
+      "equity": 1134211.03,
+      "benchmark": 1134224.45,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 7.072e-05
+    },
+    {
+      "date": "2021-07-20",
+      "equity": 1135618.97,
+      "benchmark": 1135635.02,
+      "turnover": 3.9e-07,
+      "rebalanced": true,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-21",
+      "equity": 1137062.53,
+      "benchmark": 1137083.71,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-22",
+      "equity": 1138536.93,
+      "benchmark": 1138565.53,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-23",
+      "equity": 1140038.68,
+      "benchmark": 1140076.54,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-26",
+      "equity": 1141559.31,
+      "benchmark": 1141607.66,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-27",
+      "equity": 1143093.04,
+      "benchmark": 1143152.36,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-28",
+      "equity": 1144630.84,
+      "benchmark": 1144700.81,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-29",
+      "equity": 1146163.19,
+      "benchmark": 1146242.71,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-07-30",
+      "equity": 1147681.66,
+      "benchmark": 1147768.96,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-08-02",
+      "equity": 1149176.08,
+      "benchmark": 1149268.87,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00020033
+    },
+    {
+      "date": "2021-08-03",
+      "equity": 1150638.19,
+      "benchmark": 1150733.86,
+      "turnover": 1.4e-07,
+      "rebalanced": true,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-04",
+      "equity": 1152058.09,
+      "benchmark": 1152153.93,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-05",
+      "equity": 1153428.96,
+      "benchmark": 1153522.38,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-06",
+      "equity": 1154744.01,
+      "benchmark": 1154832.8,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-09",
+      "equity": 1155997.8,
+      "benchmark": 1156080.27,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-10",
+      "equity": 1157186.13,
+      "benchmark": 1157261.22,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-11",
+      "equity": 1158307.08,
+      "benchmark": 1158374.48,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-12",
+      "equity": 1159359.78,
+      "benchmark": 1159419.88,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-13",
+      "equity": 1160346.18,
+      "benchmark": 1160400.02,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-16",
+      "equity": 1161269.76,
+      "benchmark": 1161318.9,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 6.36e-05
+    },
+    {
+      "date": "2021-08-17",
+      "equity": 1162135.02,
+      "benchmark": 1162181.36,
+      "turnover": 2.2e-07,
+      "rebalanced": true,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-18",
+      "equity": 1162948.66,
+      "benchmark": 1162994.26,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-19",
+      "equity": 1163719.75,
+      "benchmark": 1163766.62,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-20",
+      "equity": 1164457.26,
+      "benchmark": 1164507.16,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-23",
+      "equity": 1165173.1,
+      "benchmark": 1165227.38,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-24",
+      "equity": 1165878.06,
+      "benchmark": 1165937.54,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-25",
+      "equity": 1166584.14,
+      "benchmark": 1166649.06,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-26",
+      "equity": 1167304.8,
+      "benchmark": 1167374.75,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-27",
+      "equity": 1168051.85,
+      "benchmark": 1168125.89,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-30",
+      "equity": 1168837.53,
+      "benchmark": 1168914.23,
+      "turnover": 0.0,
+      "rebalanced": false,
+      "trackingError": 0.00018436
+    },
+    {
+      "date": "2021-08-31",
+      "equity": 1169672.34,
+      "benchmark": 1169749.97,
+      "turnover": 1.8e-07,
+      "rebalanced": true,
+      "trackingError": 7.993e-05
+    }
+  ],
+  "factors": [
+    {
+      "factor": "momentum_252d_skip_21d",
+      "weight": 0.22,
+      "priorIc": 0.02,
+      "rollingIc": 0.02,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "momentum_126d",
+      "weight": 0.14,
+      "priorIc": 0.018,
+      "rollingIc": 0.01318,
+      "spreadReturn": -0.063314,
+      "hitRate": 0.46212,
+      "helped": false
+    },
+    {
+      "factor": "vol_adjusted_momentum",
+      "weight": 0.12,
+      "priorIc": 0.018,
+      "rollingIc": 0.02516,
+      "spreadReturn": -0.031913,
+      "hitRate": 0.49242,
+      "helped": false
+    },
+    {
+      "factor": "reversal",
+      "weight": 0.08,
+      "priorIc": 0.01,
+      "rollingIc": 0.0025,
+      "spreadReturn": -0.799119,
+      "hitRate": 0.0,
+      "helped": false
+    },
+    {
+      "factor": "low_vol",
+      "weight": 0.08,
+      "priorIc": 0.012,
+      "rollingIc": 0.0085,
+      "spreadReturn": 0.008464,
+      "hitRate": 0.51515,
+      "helped": false
+    },
+    {
+      "factor": "value",
+      "weight": 0.1,
+      "priorIc": 0.015,
+      "rollingIc": 0.015,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "quality",
+      "weight": 0.1,
+      "priorIc": 0.015,
+      "rollingIc": 0.015,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "growth",
+      "weight": 0.06,
+      "priorIc": 0.01,
+      "rollingIc": 0.01,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "earnings_revision",
+      "weight": 0.05,
+      "priorIc": 0.012,
+      "rollingIc": 0.012,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "dividend_yield",
+      "weight": 0.03,
+      "priorIc": 0.006,
+      "rollingIc": 0.006,
+      "spreadReturn": -0.008471,
+      "hitRate": 0.50758,
+      "helped": false
+    },
+    {
+      "factor": "alt_sentiment",
+      "weight": 0.02,
+      "priorIc": 0.008,
+      "rollingIc": 0.03163,
+      "spreadReturn": 0.015248,
+      "hitRate": 0.54545,
+      "helped": false
+    }
+  ],
+  "latestSignalsDate": "2021-08-31",
+  "latestSignals": [
+    {
+      "ticker": "AAA",
+      "sector": "Technology",
+      "momentum": 0.4281,
+      "reversal": 1.4718,
+      "lowVol": -1.8348,
+      "liquidity": -1.6022,
+      "nextReturn": -0.001168
+    },
+    {
+      "ticker": "BBB",
+      "sector": "Healthcare",
+      "momentum": -0.9133,
+      "reversal": -1.1474,
+      "lowVol": -0.4762,
+      "liquidity": -0.8427,
+      "nextReturn": 0.003001
+    },
+    {
+      "ticker": "CCC",
+      "sector": "Financials",
+      "momentum": 1.0596,
+      "reversal": 0.4476,
+      "lowVol": -0.1586,
+      "liquidity": -0.1469,
+      "nextReturn": -0.000519
+    },
+    {
+      "ticker": "DDD",
+      "sector": "Energy",
+      "momentum": 1.3039,
+      "reversal": -1.4211,
+      "lowVol": 0.405,
+      "liquidity": 0.3778,
+      "nextReturn": 0.002455
+    },
+    {
+      "ticker": "EEE",
+      "sector": "Consumer",
+      "momentum": -1.3841,
+      "reversal": 0.1163,
+      "lowVol": 1.2403,
+      "liquidity": 0.8746,
+      "nextReturn": 0.000989
+    },
+    {
+      "ticker": "FFF",
+      "sector": "Industrials",
+      "momentum": -0.4942,
+      "reversal": 0.5328,
+      "lowVol": 0.8243,
+      "liquidity": 1.3392,
+      "nextReturn": -0.000172
+    }
+  ],
+  "trace": [
+    {
+      "block": "data_signals",
+      "variable": "ret_1d",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0012,
+      "std": 0.00139
+    },
+    {
+      "block": "data_signals",
+      "variable": "dollar_volume",
+      "rows": "",
+      "nulls": "",
+      "mean": 111425624.2008,
+      "std": 51062738.2778
+    },
+    {
+      "block": "data_signals",
+      "variable": "adv_21d",
+      "rows": "",
+      "nulls": "",
+      "mean": 110125875.84837,
+      "std": 50626409.5132
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.02578,
+      "std": 0.02111
+    },
+    {
+      "block": "signals",
+      "variable": "reversal_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.00614,
+      "std": 0.00689
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_63d_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.07671,
+      "std": 0.01669
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_126d_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.1593,
+      "std": 0.02046
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_252d_skip_21d_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": "",
+      "std": ""
+    },
+    {
+      "block": "signals",
+      "variable": "vol_adjusted_momentum_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 129.2717,
+      "std": 29.20945
+    },
+    {
+      "block": "signals",
+      "variable": "moving_average_trend_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.03845,
+      "std": 0.02019
+    },
+    {
+      "block": "signals",
+      "variable": "drawdown_recovery_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.00181,
+      "std": 0.00327
+    },
+    {
+      "block": "signals",
+      "variable": "liquidity_change_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.07539,
+      "std": 0.01776
+    },
+    {
+      "block": "signals",
+      "variable": "growth_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "earnings_revision_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "dividend_yield_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "realized_vol",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.00092,
+      "std": 0.00052
+    },
+    {
+      "block": "signals",
+      "variable": "low_vol_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.00092,
+      "std": 0.00052
+    },
+    {
+      "block": "signals",
+      "variable": "liquidity_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 18.39858,
+      "std": 0.50442
+    },
+    {
+      "block": "signals",
+      "variable": "value_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "quality_raw",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "alt_sentiment_raw_signal",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.00139,
+      "std": 0.42373
+    },
+    {
+      "block": "signals",
+      "variable": "momentum",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 1.0
+    },
+    {
+      "block": "signals",
+      "variable": "reversal",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.0,
+      "std": 1.0
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_63d",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.90871
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_126d",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.0,
+      "std": 0.59033
+    },
+    {
+      "block": "signals",
+      "variable": "momentum_252d_skip_21d",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "vol_adjusted_momentum",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.59033
+    },
+    {
+      "block": "signals",
+      "variable": "moving_average_trend",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.92524
+    },
+    {
+      "block": "signals",
+      "variable": "drawdown_recovery",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.0,
+      "std": 0.92524
+    },
+    {
+      "block": "signals",
+      "variable": "liquidity_change",
+      "rows": "",
+      "nulls": "",
+      "mean": -0.0,
+      "std": 0.89188
+    },
+    {
+      "block": "signals",
+      "variable": "growth",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "earnings_revision",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "dividend_yield",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "value",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "quality",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 0.0
+    },
+    {
+      "block": "signals",
+      "variable": "low_vol",
+      "rows": "",
+      "nulls": "",
+      "mean": 0.0,
+      "std": 1.0
+    }
+  ],
+  "docs": [
+    {
+      "title": "Architecture",
+      "path": "docs/ARCHITECTURE.md"
+    },
+    {
+      "title": "Asx Analysis",
+      "path": "docs/ASX_ANALYSIS.md"
+    },
+    {
+      "title": "Asx Reit Backtests",
+      "path": "docs/ASX_REIT_BACKTESTS.md"
+    },
+    {
+      "title": "Cli Reference",
+      "path": "docs/CLI_REFERENCE.md"
+    },
+    {
+      "title": "Config",
+      "path": "docs/CONFIG.md"
+    },
+    {
+      "title": "Contents",
+      "path": "docs/CONTENTS.md"
+    },
+    {
+      "title": "Factors",
+      "path": "docs/FACTORS.md"
+    },
+    {
+      "title": "Static Hosting",
+      "path": "docs/GITHUB_PAGES.md"
+    },
+    {
+      "title": "Glossary",
+      "path": "docs/GLOSSARY.md"
+    },
+    {
+      "title": "Math",
+      "path": "docs/MATH.md"
+    },
+    {
+      "title": "Python Reference",
+      "path": "docs/PYTHON_REFERENCE.md"
+    },
+    {
+      "title": "Runbook",
+      "path": "docs/RUNBOOK.md"
+    },
+    {
+      "title": "Us Reit Backtests",
+      "path": "docs/US_REIT_BACKTESTS.md"
+    },
+    {
+      "title": "Video Blueprint",
+      "path": "docs/VIDEO_BLUEPRINT.md"
+    },
+    {
+      "title": "Worked Examples",
+      "path": "docs/WORKED_EXAMPLES.md"
+    }
+  ],
+  "workflow": [
+    "Python downloads or imports market data",
+    "Backtest writes CSV, YAML, JSON, and audit logs",
+    "A static build publishes selected artifacts",
+    "The browser renders charts, tables, filters, and downloads"
+  ]
+}

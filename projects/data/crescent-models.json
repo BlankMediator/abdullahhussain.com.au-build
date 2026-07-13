@@ -1,0 +1,91 @@
+{
+  "sourceRepo": "https://github.com/BlankMediator/crescent-visibility",
+  "models": [
+    {
+      "name": "Ilyas",
+      "inputs": [
+        "moon altitude",
+        "elongation"
+      ],
+      "thresholds": [
+        "visible: altitude > 10 and elongation > 11",
+        "marginal: altitude > 5 and elongation > 8"
+      ]
+    },
+    {
+      "name": "Yallop",
+      "inputs": [
+        "arc of light",
+        "altitude difference"
+      ],
+      "thresholds": [
+        "A: arc > 14.8 and altitude difference > 4.1",
+        "B-F: decreasing arc thresholds down to 7.0"
+      ]
+    },
+    {
+      "name": "Odeh",
+      "inputs": [
+        "elongation",
+        "moon age"
+      ],
+      "thresholds": [
+        "not visible: elongation < 8 or age < 15",
+        "easily visible: elongation > 10 and age > 20"
+      ]
+    },
+    {
+      "name": "Shaukat",
+      "inputs": [
+        "elongation",
+        "moon altitude",
+        "moon age"
+      ],
+      "thresholds": [
+        "visible: altitude > 10, elongation > 12, age > 20",
+        "marginal: altitude > 6, elongation > 9, age > 16"
+      ]
+    },
+    {
+      "name": "SAAO",
+      "inputs": [
+        "moon age",
+        "lag time"
+      ],
+      "thresholds": [
+        "visible: age > 20 and lag > 40",
+        "marginal: age > 15 and lag > 30"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Melbourne sunset",
+      "lat": -37.8136,
+      "lon": 144.9631,
+      "date": "2025-03-30",
+      "time": "08:00"
+    },
+    {
+      "name": "Sydney coastal",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "date": "2025-03-30",
+      "time": "07:55"
+    },
+    {
+      "name": "Perth western horizon",
+      "lat": -31.9523,
+      "lon": 115.8613,
+      "date": "2025-03-30",
+      "time": "10:20"
+    },
+    {
+      "name": "Jakarta low latitude",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "date": "2025-03-30",
+      "time": "10:45"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sourceRepo": "https://github.com/BlankMediator/youtube-transcript-extractor",
+  "extensionName": "YouTube Transcript Extractor",
+  "version": "1.0.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "hostPermissions": [],
+  "browserFiles": [
+    "youtube-transcript-extension/manifest.json",
+    "youtube-transcript-extension/content.js",
+    "youtube-transcript-extension/background.js",
+    "youtube_transcript_snippet.js"
+  ],
+  "features": [
+    "reads transcript rows already rendered by YouTube",
+    "copies transcript text locally",
+    "downloads TXT and structured JSON",
+    "does not require a hosted backend"
+  ],
+  "snippet": "(() => {\n  const rows = [...document.querySelectorAll(\"ytd-transcript-segment-renderer\")]\n    .map((row) => {\n      const timestamp = row.querySelector(\".segment-timestamp\")?.textContent?.trim() || \"\";\n      const text = row.querySelector(\".segment-text\")?.textContent?.replace(/\\s+/g, \" \")?.trim() || \"\";\n      return { timestamp, text };\n    })\n    .filter((row) => row.text);\n\n  if (!rows.length) {\n    alert(\"No transcript rows found. Open the YouTube transcript panel first, then run this again.\");\n    return;\n  }\n\n  const videoId = new URL(location.href).searchParams.get(\"v\") || \"youtube\";\n  const txt = rows.map((row) => `${row.timestamp} ${row.text}`).join(\"\\n\");\n  const json = JSON.stringify(rows, null, 2);\n\n  const download = (name, content, type) => {\n    const blob = new Blob([content], { type });\n    const url = URL.createObjectURL(blob);\n    const link = document.createElement(\"a\");\n    link.href = url;\n    link.download = name;\n    document.body.appendChild(link);\n    link.click();\n    link.remove();\n    URL.revokeObjectURL(url);\n  };\n\n  download(`${videoId}.txt`, txt, \"text/plain;charset=utf-8\");\n  download(`${videoId}.json`, json, \"application/json;charset=utf-8\");\n  console.log(`Downloaded ${rows.length} transcript rows.`);\n})();",
+  "contentJsBytes": 5644
+}

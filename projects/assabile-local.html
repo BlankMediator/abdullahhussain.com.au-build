@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assabile Local Browser Catalogue | Abdullah Hussain</title>
     <meta name="description" content="A static catalogue preview for Assabile Local's browser-capable surface.">
-    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+    <link rel="stylesheet" href="../styles.css?v=20260714-comprehensive">
   </head>
   <body data-project-app="assabile">
     <header class="site-header">
@@ -26,14 +26,35 @@
         </div>
       </section>
       <section class="tool-panel">
-        <div class="control-grid compact">
+        <p class="status-line" id="assabile-generated">Loading generated catalogue...</p>
+        <div class="result-metrics" id="assabile-metrics"></div>
+        <div class="split-panel">
+          <div>
+            <h2>Country distribution</h2>
+            <div class="bar-list" id="country-bars"></div>
+          </div>
+          <div>
+            <h2>Static/browser boundary</h2>
+            <ul class="compact-list">
+              <li>Search, filtering, profile links, and media counts run from generated JSON.</li>
+              <li>Direct public media links can open in the browser when present in source metadata.</li>
+              <li>Fresh sync, local cache writes, and ZIP assembly remain local-server jobs.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="control-grid assabile-controls">
           <label><span>Search</span><input id="assabile-search" type="search" autocomplete="off" spellcheck="false" placeholder="sudais, egypt, video..."></label>
-          <label><span>Kind</span><select id="assabile-kind"><option value="all">All</option><option value="recitation">Recitation</option><option value="anasheed">Anasheed</option><option value="videoLesson">Video lessons</option><option value="teacher">Teacher</option></select></label>
+          <label><span>Kind</span><select id="assabile-kind"><option value="all">All</option><option value="recitations">Recitations</option><option value="albums">Anasheed/albums</option><option value="audioLessons">Audio lessons</option><option value="videoLessons">Video lessons</option><option value="reciter">Reciter role</option><option value="munshid">Munshid role</option><option value="teacher">Teacher role</option></select></label>
+          <label><span>Country</span><select id="assabile-country"><option value="all">All countries</option></select></label>
+          <label><span>Sort</span><select id="assabile-sort"><option value="media">Most media</option><option value="name">Name</option><option value="country">Country</option></select></label>
         </div>
         <p class="status-line" id="assabile-count"></p>
         <div class="mini-grid" id="assabile-results"></div>
+        <div class="actions footer-actions">
+          <button class="button" id="assabile-more" type="button">Show more</button>
+        </div>
       </section>
     </main>
-    <script src="project-app.js?v=20260713-projects"></script>
+    <script src="project-app.js?v=20260714-comprehensive"></script>
   </body>
 </html>

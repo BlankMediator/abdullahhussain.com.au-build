@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crescent Visibility | Abdullah Hussain</title>
     <meta name="description" content="Browser-side crescent visibility model comparison inspired by the Python repo.">
-    <link rel="stylesheet" href="../styles.css?v=20260713-projects">
+    <link rel="stylesheet" href="../styles.css?v=20260714-comprehensive">
   </head>
   <body data-project-app="crescent">
     <header class="site-header">
@@ -26,6 +26,13 @@
         </div>
       </section>
       <section class="tool-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Scenario estimator</p>
+            <h2>Estimate inputs, then inspect model thresholds</h2>
+          </div>
+        </div>
+        <div class="toolbar-row" id="scenario-buttons"></div>
         <form class="control-grid" id="crescent-form">
           <label><span>Latitude</span><input name="lat" type="number" step="0.0001" value="-37.8136"></label>
           <label><span>Longitude</span><input name="lon" type="number" step="0.0001" value="144.9631"></label>
@@ -33,10 +40,20 @@
           <label><span>UTC time</span><input name="time" type="time" value="08:00"></label>
           <button class="button primary" type="submit">Calculate</button>
         </form>
+        <div class="control-grid manual-inputs">
+          <label><span>Moon altitude</span><input class="manual-model-input" id="moon-altitude" type="number" step="0.01"></label>
+          <label><span>Sun altitude</span><input class="manual-model-input" id="sun-altitude" type="number" step="0.01"></label>
+          <label><span>Elongation</span><input class="manual-model-input" id="elongation" type="number" step="0.01"></label>
+          <label><span>Moon age</span><input class="manual-model-input" id="moon-age" type="number" step="0.01"></label>
+          <label><span>Lag minutes</span><input class="manual-model-input" id="lag-time" type="number" step="0.01"></label>
+        </div>
         <div id="crescent-result"></div>
+        <h2>Model thresholds from the Python repo</h2>
+        <div class="mini-grid" id="model-thresholds"></div>
+        <p class="status-line" id="crescent-status"></p>
         <p class="status-line">This browser version uses an approximate astronomical estimator plus the repo's visibility decision thresholds. The Python/Skyfield workflow remains the source for high-precision ephemeris runs.</p>
       </section>
     </main>
-    <script src="project-app.js?v=20260713-projects"></script>
+    <script src="project-app.js?v=20260714-comprehensive"></script>
   </body>
 </html>
