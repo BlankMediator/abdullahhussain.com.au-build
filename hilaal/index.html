@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hilaal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Skyfield hilaal visibility</p>
+        <h1>Hilaal</h1>
+      </div>
+      <nav>
+        <a href="index.html" aria-current="page">Dashboard</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </header>
+
+    <main id="dashboard">
+      <section class="controls" aria-label="Controls">
+        <label class="search-field">
+          Search location
+          <input id="locationSearch" type="search" list="locationSuggestions" placeholder="City, country, suburb, or complete address">
+          <datalist id="locationSuggestions"></datalist>
+          <div id="remoteSuggestions" class="suggestions" hidden></div>
+          <small id="locationSearchStatus"></small>
+        </label>
+        <label>
+          Location
+          <select id="locationSelect"></select>
+        </label>
+        <button id="currentButton" type="button" title="Use browser date, time, time zone, and location when available.">Use current</button>
+        <label>
+          Date
+          <select id="dateSelect"></select>
+        </label>
+        <div class="control-field time-field">
+          <span>Time sweep</span>
+          <div class="time-control">
+            <button id="timePrev" type="button" title="Previous hour" aria-label="Previous hour">&lt;</button>
+            <input id="timeSlider" type="range" min="0" max="23" step="1" value="0">
+            <button id="timeNext" type="button" title="Next hour" aria-label="Next hour">&gt;</button>
+          </div>
+          <select id="timeSelect" aria-label="Select hour"></select>
+          <span id="timeLabel"></span>
+        </div>
+        <label>
+          Visibility metric
+          <select id="metricSelect"></select>
+        </label>
+        <span class="info-tip" tabindex="0" role="button" aria-label="Visibility metric info" data-tip="Yallop and Odeh are published ARCV/crescent-width criteria. Earlier placeholder metrics have been removed until implemented from real sources.">i</span>
+        <label>
+          Projection
+          <select id="projectionSelect">
+            <option value="equirectangular">Plate Carree</option>
+            <option value="robinson">Robinson</option>
+            <option value="mollweide">Mollweide</option>
+            <option value="equalEarth">Equal Earth</option>
+            <option value="orthographic">Orthographic</option>
+          </select>
+        </label>
+        <span class="info-tip" tabindex="0" role="button" aria-label="Projection info" data-tip="Projection controls how the Earth is flattened. Plate Carree preserves the lat/lon grid; Robinson is a compromise; Mollweide and Equal Earth preserve area; Orthographic is globe-like.">i</span>
+        <label>
+          Display time zone
+          <select id="timezoneSelect">
+            <option value="location">Selected location</option>
+            <option value="browser">Browser local</option>
+            <option value="utc">UTC</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="status-grid">
+        <article>
+          <span>Visibility band</span>
+          <strong id="bandCard">--</strong>
+          <small id="labelCard">--</small>
+        </article>
+        <article>
+          <span>Moon birth UTC</span>
+          <strong id="birthCard">--</strong>
+          <small id="nextBirthCard">--</small>
+        </article>
+        <article>
+          <span>Sunset / moonset</span>
+          <strong id="setCard">--</strong>
+          <small id="lagCard">--</small>
+        </article>
+        <article>
+          <span>Islamic geometry gate</span>
+          <strong id="gateCard">--</strong>
+          <small id="gateDetailCard">--</small>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <h2>Visibility Bands</h2>
+          <p>Colour is the primary signal; numeric q/V values are in tooltips and details.</p>
+        </div>
+        <div id="legend" class="legend"></div>
+      </section>
+
+      <section class="tabs" aria-label="Map views">
+        <button class="tab-button active" type="button" data-view="day">Best On Selected Date</button>
+        <button class="tab-button" type="button" data-view="instant">Selected Date + Time</button>
+        <button class="tab-button" type="button" data-view="slice">Date + Time Across Lat/Lon</button>
+      </section>
+
+      <section class="split">
+        <div class="panel map-panel">
+          <div class="panel-title">
+            <h2 id="mapTitle">Earth Visibility Map</h2>
+            <p id="mapSubtitle">Country, city, and grid calculation points are included.</p>
+          </div>
+          <canvas id="mapCanvas" width="1120" height="560"></canvas>
+          <div id="tooltip" class="tooltip" hidden></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Selected Position</h2>
+            <p id="positionText"></p>
+          </div>
+          <dl id="detailList" class="details"></dl>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Visibility Across 24 Hours</h2>
+            <p>Selected location and calendar date.</p>
+          </div>
+          <svg id="timeChart" viewBox="0 0 760 320" role="img" aria-label="Visibility over 24 hours"></svg>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Gregorian Month Calendar</h2>
+            <p>Each day shaded by best visibility in the selected location.</p>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Latitude Sweep</h2>
+            <p>Same longitude, selected date and time.</p>
+          </div>
+          <svg id="latChart" viewBox="0 0 760 260" role="img" aria-label="Latitude sweep"></svg>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Longitude Sweep</h2>
+            <p>Same latitude, selected date and time.</p>
+          </div>
+          <svg id="lonChart" viewBox="0 0 760 260" role="img" aria-label="Longitude sweep"></svg>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">Copyright Abdullah Hussain 2026</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
