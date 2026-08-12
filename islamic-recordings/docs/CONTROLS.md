@@ -1,4 +1,4 @@
-# Assabile Local Controls
+# Islamic Recordings Controls
 
 ## Launchers
 
@@ -29,9 +29,9 @@ Direct commands:
 ```powershell
 python server.py
 python server.py --host 0.0.0.0 --port 8765
-python assabile_cli.py shell
-python assabile_cli.py gui
-python assabile_cli.py serve --host 0.0.0.0 --port 9000
+python islamic_recordings_cli.py shell
+python islamic_recordings_cli.py gui
+python islamic_recordings_cli.py serve --host 0.0.0.0 --port 9000
 ```
 
 For another device on the same LAN, use the `http://192.168.x.x:8765` style URL printed by the server. If the browser reports that the connection was refused, the usual causes are: the server is not running, the server is bound to `127.0.0.1` instead of `0.0.0.0`, the wrong port is being used, or the operating system firewall is blocking Python.
@@ -46,11 +46,11 @@ Printed URLs can include several network interfaces:
 If the WebUI opens over LAN but playing a track fails with a refused-connection error, clear stale listeners and restart one current LAN-bound server:
 
 ```powershell
-python assabile_cli.py servers stop --all --port 8765
+python islamic_recordings_cli.py servers stop --all --port 8765
 python server.py --host 0.0.0.0 --port 8765
 ```
 
-When the server terminal shows `assabile>`, use:
+When the server terminal shows `islamic-recordings>`, use:
 
 - `gui`: open the web UI.
 - `cli`: open the interactive CLI.
@@ -89,6 +89,7 @@ When the server terminal shows `assabile>`, use:
 - Recitation sorting supports traditional order, surah name, chronological order, verse count, and most listened.
 - Recitation filters include all/makki/madani and collection/riwaya where metadata is available.
 - Recitation playback loads the relevant queue and highlights the current track wherever it appears.
+- If a profile advertises recitations but the catalogue has no collection rows, the Recitations tab automatically tries the upstream hidden default player source and then derives collection labels from the returned rows.
 
 ## Albums, Lessons, Photos, And Videos
 
@@ -128,32 +129,32 @@ When the server terminal shows `assabile>`, use:
 ## CLI
 
 ```powershell
-python assabile_cli.py serve
-python assabile_cli.py shell
-python assabile_cli.py gui
-python assabile_cli.py sync
-python assabile_cli.py list mishary
-python assabile_cli.py search sudais hafs --people
-python assabile_cli.py search idriss fatiha hafs
-python assabile_cli.py search abdulbasit fatiha warsh
-python assabile_cli.py search sudais --surah Al-Fatiha
-python assabile_cli.py search hafs --kind recitation --riwaya hafs --page 2 --per-page 50
-python assabile_cli.py profile 38
-python assabile_cli.py profile abdul-rahman-al-sudais-12
-python assabile_cli.py profile abdul-rahman-al-sudais-12 --json
-python assabile_cli.py tracks 38 fatiha hafs
-python assabile_cli.py tracks ayman-swed-345 --kind videoLesson --page 2 --per-page 5
-python assabile_cli.py tracks abdallah-kamel-318 --kind recitation --collection 177 --page 1 --per-page 25
-python assabile_cli.py tracks abdallah-kamel-318 --riwaya hafs --surah Fatiha
-python assabile_cli.py play ayman-swed-345 --index 1
-python assabile_cli.py play ayman-swed-345 "Episode 10" --first
-python assabile_cli.py download --person abdallah-kamel-318 --kind recitations
-python assabile_cli.py library
-python assabile_cli.py cache info
-python assabile_cli.py cache clear
-python assabile_cli.py servers list
-python assabile_cli.py servers stop --pid 12345
-python assabile_cli.py servers stop --all
+python islamic_recordings_cli.py serve
+python islamic_recordings_cli.py shell
+python islamic_recordings_cli.py gui
+python islamic_recordings_cli.py sync
+python islamic_recordings_cli.py list mishary
+python islamic_recordings_cli.py search sudais hafs --people
+python islamic_recordings_cli.py search idriss fatiha hafs
+python islamic_recordings_cli.py search abdulbasit fatiha warsh
+python islamic_recordings_cli.py search sudais --surah Al-Fatiha
+python islamic_recordings_cli.py search hafs --kind recitation --riwaya hafs --page 2 --per-page 50
+python islamic_recordings_cli.py profile 38
+python islamic_recordings_cli.py profile abdul-rahman-al-sudais-12
+python islamic_recordings_cli.py profile abdul-rahman-al-sudais-12 --json
+python islamic_recordings_cli.py tracks 38 fatiha hafs
+python islamic_recordings_cli.py tracks ayman-swed-345 --kind videoLesson --page 2 --per-page 5
+python islamic_recordings_cli.py tracks abdallah-kamel-318 --kind recitation --collection 177 --page 1 --per-page 25
+python islamic_recordings_cli.py tracks abdallah-kamel-318 --riwaya hafs --surah Fatiha
+python islamic_recordings_cli.py play ayman-swed-345 --index 1
+python islamic_recordings_cli.py play ayman-swed-345 "Episode 10" --first
+python islamic_recordings_cli.py download --person abdallah-kamel-318 --kind recitations
+python islamic_recordings_cli.py library
+python islamic_recordings_cli.py cache info
+python islamic_recordings_cli.py cache clear
+python islamic_recordings_cli.py servers list
+python islamic_recordings_cli.py servers stop --pid 12345
+python islamic_recordings_cli.py servers stop --all
 ```
 
 CLI profile and playback flow:
@@ -187,11 +188,11 @@ Filter flags for `search`, `tracks`, and `play`:
 - `data/downloads/` is the permanent shared cache used by both CLI and WebUI playback.
 - Existing downloaded files are reused while present.
 - Bulk downloads and playback share the same source-URL cache, so recitations downloaded through a profile/reciter ZIP can be reused later by CLI/WebUI playback.
-- If catalogue sync discovers that a local media item now points to a different Assabile source URL, the next play/download refreshes that cached file.
+- If catalogue sync discovers that a local media item now points to a different upstream source URL, the next play/download refreshes that cached file.
 - If a cached file is removed, the next play/download fetches it again.
-- `python assabile_cli.py cache clear` asks for confirmation and removes all files under `data/downloads/`.
-- `python assabile_cli.py cache clear --yes` skips confirmation for scripted cleanup.
-- Sync merges language fallback sources from `www`, `ar`, `fr`, and `es` Assabile pages where available.
+- `python islamic_recordings_cli.py cache clear` asks for confirmation and removes all files under `data/downloads/`.
+- `python islamic_recordings_cli.py cache clear --yes` skips confirmation for scripted cleanup.
+- Sync merges upstream language fallback sources from `www`, `ar`, `fr`, and `es` pages where available.
 - Video lesson series are retried through fallback language/source pages before being left empty.
 - Cached metadata is stored under `data/cache/`.
 - Cached media and ZIPs are stored under `data/downloads/`.
@@ -199,10 +200,10 @@ Filter flags for `search`, `tracks`, and `play`:
 ## Server Management
 
 ```powershell
-python assabile_cli.py servers list
-python assabile_cli.py servers stop --all
-python assabile_cli.py servers stop --all-other
-python assabile_cli.py serve --host 0.0.0.0 --port 9000
+python islamic_recordings_cli.py servers list
+python islamic_recordings_cli.py servers stop --all
+python islamic_recordings_cli.py servers stop --all-other
+python islamic_recordings_cli.py serve --host 0.0.0.0 --port 9000
 ```
 
 On Android/Pydroid, server listener discovery may be unavailable. In that case `servers list` reports that limitation, but catalogue commands still work.

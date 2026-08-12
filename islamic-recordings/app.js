@@ -1,3 +1,19 @@
+const STORAGE_KEYS = {
+  autoplay: "islamic-recordings-player-autoplay",
+  volume: "islamic-recordings-player-volume",
+  speed: "islamic-recordings-player-speed",
+  searchMemory: "islamic-recordings-search-memory",
+};
+
+function storedSetting(key, legacyKey, fallback) {
+  const current = localStorage.getItem(key);
+  if (current !== null) return current;
+  const legacy = localStorage.getItem(legacyKey);
+  if (legacy === null) return fallback;
+  localStorage.setItem(key, legacy);
+  return legacy;
+}
+
 const state = {
   people: [],
   peopleById: new Map(),
@@ -26,6 +42,7 @@ const state = {
   sideHomeButtonVisible: false,
   resolvedPlayers: new Map(),
   syncedRecitations: new Map(),
+  autoSyncRecitations: new Set(),
   syncedRecordings: new Map(),
   recitationControls: {
     sort: "traditional",
@@ -46,11 +63,11 @@ const state = {
     shuffle: false,
     repeat: 0,
     repeatLeft: 0,
-    autoplay: localStorage.getItem("assabile-player-autoplay") !== "false",
+    autoplay: storedSetting(STORAGE_KEYS.autoplay, "assabile-player-autoplay", "true") !== "false",
     collapsed: false,
     playlistCollapsed: false,
-    volume: Number.parseFloat(localStorage.getItem("assabile-player-volume") || "1"),
-    speed: Number.parseFloat(localStorage.getItem("assabile-player-speed") || "1"),
+    volume: Number.parseFloat(storedSetting(STORAGE_KEYS.volume, "assabile-player-volume", "1")),
+    speed: Number.parseFloat(storedSetting(STORAGE_KEYS.speed, "assabile-player-speed", "1")),
     savedSize: null,
     fullsizeSavedSize: null,
     videoFullsize: false,
@@ -62,7 +79,8 @@ const state = {
   },
 };
 
-const SEARCH_MEMORY_KEY = "assabile-local-search-memory";
+const SEARCH_MEMORY_KEY = STORAGE_KEYS.searchMemory;
+storedSetting(SEARCH_MEMORY_KEY, "assabile-local-search-memory", "[]");
 const APP_BASE_URL = new URL(".", document.currentScript?.src || window.location.href);
 let staticCatalogPromise = null;
 let staticPlayerUrlsPromise = null;
@@ -495,7 +513,7 @@ function renderHome() {
   renderSideHome();
   $("#profile").innerHTML = `
     <div>
-      <h1>Assabile Local</h1>
+      <h1>Islamic Recordings</h1>
       <p class="muted">Browse the local catalogue by section, then cache only the media you choose to play.</p>
     </div>
   `;
@@ -544,7 +562,7 @@ function renderHome() {
         </div>
         <div class="home-filters">
           <div class="search-box">
-            <input id="home-search" type="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="search" name="assabile-local-${Date.now()}" placeholder="Keyword search">
+            <input id="home-search" type="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="search" name="islamic-recordings-${Date.now()}" placeholder="Keyword search">
             ${
               searchMemory.length
                 ? `<div class="search-memory" id="home-search-memory">
@@ -781,7 +799,7 @@ function renderDocsHome(categories) {
   renderSideHome();
   $("#profile").innerHTML = `
     <div>
-      <h1>Assabile Local</h1>
+      <h1>Islamic Recordings</h1>
       <p class="muted">Local controls and command reference.</p>
     </div>
   `;
@@ -912,7 +930,7 @@ async function bulkDownload(payload) {
   }
   const ok = await confirmAction({
     title: "Download ZIP?",
-    message: "This can download many files from Assabile and may take a while.",
+    message: "This can download many files from the upstream catalogue and may take a while.",
     confirmLabel: "Yes, download",
   });
   if (!ok) return;
@@ -1089,6 +1107,7 @@ function renderPeople() {
 
 async function selectPerson(id) {
   state.person = state.staticSite ? await loadStaticPerson(id) : await api(`/api/person/${encodeURIComponent(id)}`);
+  ensureRecitationCollections();
   state.queue = [];
   state.recitationControls.collection = "all";
   state.tab = firstProfileTab();
@@ -1145,7 +1164,7 @@ function renderProfile() {
 function availableTabs() {
   const tabs = [];
   if (state.person.collections?.length) tabs.push({ id: "collections", label: tabLabel("Al-Massahef", tabContentCount("collections")) });
-  if (state.person.recitations?.length) tabs.push({ id: "recitations", label: tabLabel("Recitations", tabContentCount("recitations")) });
+  if (state.person.recitations?.length || numeric(state.person.tabs?.recitations, 0)) tabs.push({ id: "recitations", label: tabLabel("Recitations", tabContentCount("recitations")) });
   if (state.person.albums?.length) tabs.push({ id: "albums", label: tabLabel("Anasheed", tabContentCount("albums")) });
   if (state.person.audioLessons?.length) tabs.push({ id: "audioLessons", label: tabLabel("Audio Lessons", tabContentCount("audioLessons")) });
   if (state.person.videoLessons?.length) tabs.push({ id: "videoLessons", label: tabLabel("Video Lessons", tabContentCount("videoLessons")) });
@@ -1160,6 +1179,7 @@ function tabContentCount(key) {
   if (key === "albums") return collectionRecordingCount(state.person.albums) || state.person.albums?.length || 0;
   if (key === "audioLessons") return collectionRecordingCount(state.person.audioLessons) || state.person.audioLessons?.length || 0;
   if (key === "videoLessons") return collectionRecordingCount(state.person.videoLessons) || state.person.videoLessons?.length || 0;
+  if (key === "recitations") return state.person.recitations?.length || numeric(state.person.tabs?.recitations, 0);
   return state.person[key]?.length || 0;
 }
 
@@ -1208,6 +1228,32 @@ function renderPanel() {
 function collectionTitle(collectionId) {
   const collection = (state.person.collections || []).find((item) => String(item.id) === String(collectionId));
   return collection?.title || "Unknown collection";
+}
+
+function defaultRecitationAjax(person = state.person) {
+  const numericId = String(person?.id || "").split("-").pop();
+  return numericId ? `https://www.assabile.com/ajax/loadplayer-${numericId}-0` : "";
+}
+
+function ensureRecitationCollections() {
+  if (!state.person) return;
+  const collections = state.person.collections || [];
+  const seen = new Set(collections.map((item) => String(item.id || "")).filter(Boolean));
+  const incoming = [];
+  (state.person.recitations || []).forEach((recitation) => {
+    const collectionId = String(recitation.collectionId || "").trim();
+    if (!collectionId || seen.has(collectionId)) return;
+    seen.add(collectionId);
+    incoming.push({
+      id: collectionId,
+      title: recitation.riwayah || "Recitations",
+      riwayah: recitation.riwayah || "",
+      category: "",
+      ajax: defaultRecitationAjax(),
+      inferred: true,
+    });
+  });
+  if (incoming.length) state.person.collections = [...collections, ...incoming];
 }
 
 function collectionRecitationCounts() {
@@ -1293,7 +1339,7 @@ function renderComments() {
     .map((recitation) => ({ title: recitationTitle(recitation), comments: recitation.comments }));
   $("#panel").innerHTML = `
     <div class="toolbar"><h2>Comments</h2></div>
-    <div class="notice">Comments are mirrored read-only from Assabile metadata where available.</div>
+    <div class="notice">Comments are mirrored read-only from upstream metadata where available.</div>
     <div class="grid">
       ${
         profileComments
@@ -1357,6 +1403,7 @@ async function syncCollection(button, ajaxUrl) {
     alert(serverOnlyError("Metadata syncing").message);
     return;
   }
+  const originalText = button.textContent;
   button.disabled = true;
   button.textContent = "Syncing...";
   try {
@@ -1366,6 +1413,7 @@ async function syncCollection(button, ajaxUrl) {
     });
     state.syncedRecitations.set(ajaxUrl, data.recitations);
     state.person.recitations = mergeById(state.person.recitations || [], data.recitations);
+    ensureRecitationCollections();
     state.tab = "recitations";
     renderTabs();
     renderPanel();
@@ -1373,7 +1421,7 @@ async function syncCollection(button, ajaxUrl) {
     alert(error.message);
   } finally {
     button.disabled = false;
-    button.textContent = "Sync recitation rows";
+    button.textContent = originalText;
   }
 }
 
@@ -1390,6 +1438,7 @@ function mergeById(existing, incoming) {
 }
 
 function renderRecitations() {
+  ensureRecitationCollections();
   const counts = collectionRecitationCounts();
   if (state.recitationControls.collection !== "all" && !counts.get(state.recitationControls.collection)) {
     state.recitationControls.collection = "all";
@@ -1423,6 +1472,7 @@ function renderRecitations() {
       </div>
     `)
     .join("");
+  const canSyncHidden = !recitations.length && numeric(state.person.tabs?.recitations, 0) && defaultRecitationAjax();
   $("#panel").innerHTML = `
     <div class="recitation-toolbar">
       <div class="toolbar-row">
@@ -1453,9 +1503,24 @@ function renderRecitations() {
         </label>
       </div>
     </div>
-    <div class="grid">${rows || `<div class="empty"><h2>No recitations</h2><p>Adjust the filters or sync another collection.</p></div>`}</div>
+    <div class="grid">${
+      rows ||
+      `<div class="empty">
+        <h2>No recitations</h2>
+        <p>${canSyncHidden ? "This profile advertises recitations but no collection rows are stored yet." : "Adjust the filters or sync another collection."}</p>
+        ${canSyncHidden ? `<button class="button" type="button" data-sync-default-recitations>Sync hidden recitations</button>` : ""}
+      </div>`
+    }</div>
   `;
   bindRecitationToolbar();
+  const defaultSyncButton = $("[data-sync-default-recitations]");
+  defaultSyncButton?.addEventListener("click", (event) => syncCollection(event.currentTarget, defaultRecitationAjax()));
+  if (canSyncHidden && defaultSyncButton && !state.autoSyncRecitations.has(state.person.id)) {
+    state.autoSyncRecitations.add(state.person.id);
+    setTimeout(() => {
+      if (document.body.contains(defaultSyncButton)) syncCollection(defaultSyncButton, defaultRecitationAjax());
+    }, 0);
+  }
   document.querySelectorAll("[data-play-recitation]").forEach((button) => {
     button.addEventListener("click", () => playRecitationById(button.dataset.playRecitation));
   });
@@ -1604,7 +1669,7 @@ async function cacheMedia(media) {
     }
   })();
   const ext = pathExt && pathExt.length <= 5 ? `.${pathExt}` : media.kind === "videoLesson" || media.kind === "video" ? ".mp4" : ".mp3";
-  const filename = `${media.creator || state.person?.name || "assabile"} - ${media.title || "recording"}${ext}`;
+  const filename = `${media.creator || state.person?.name || "islamic-recordings"} - ${media.title || "recording"}${ext}`;
   const saved = await api("/api/download", {
     method: "POST",
     body: JSON.stringify({ url: media.mediaUrl, filename, subdir: media.personId || state.person?.id || "home" }),
@@ -2603,7 +2668,7 @@ function setRecordingVolume(event) {
   const raw = Number(event.target.value);
   const value = event.target.matches("[data-recording-volume-number]") ? raw / 100 : raw;
   state.recordingPlayer.volume = Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : 1;
-  localStorage.setItem("assabile-player-volume", String(state.recordingPlayer.volume));
+  localStorage.setItem(STORAGE_KEYS.volume, String(state.recordingPlayer.volume));
   if (state.recordingPlayer.audio) state.recordingPlayer.audio.volume = state.recordingPlayer.volume;
   updateRecordingPlayerUi();
 }
@@ -2612,14 +2677,14 @@ function syncRecordingVolume() {
   const audio = state.recordingPlayer.audio;
   if (!audio) return;
   state.recordingPlayer.volume = audio.volume;
-  localStorage.setItem("assabile-player-volume", String(state.recordingPlayer.volume));
+  localStorage.setItem(STORAGE_KEYS.volume, String(state.recordingPlayer.volume));
   updateRecordingPlayerUi();
 }
 
 function setRecordingSpeed(event) {
   const value = Number(event.target.value);
   state.recordingPlayer.speed = Number.isFinite(value) ? Math.max(0.25, Math.min(4, value)) : 1;
-  localStorage.setItem("assabile-player-speed", String(state.recordingPlayer.speed));
+  localStorage.setItem(STORAGE_KEYS.speed, String(state.recordingPlayer.speed));
   if (state.recordingPlayer.audio) state.recordingPlayer.audio.playbackRate = state.recordingPlayer.speed;
   updateRecordingPlayerUi();
 }
@@ -2666,7 +2731,7 @@ function toggleRecordingShuffle() {
 
 function toggleRecordingAutoplay() {
   state.recordingPlayer.autoplay = !state.recordingPlayer.autoplay;
-  localStorage.setItem("assabile-player-autoplay", String(state.recordingPlayer.autoplay));
+  localStorage.setItem(STORAGE_KEYS.autoplay, String(state.recordingPlayer.autoplay));
   updateRecordingPlayerUi();
 }
 
