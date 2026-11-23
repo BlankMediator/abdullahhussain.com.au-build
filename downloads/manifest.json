@@ -7,11 +7,15 @@
       "kind": "release",
       "version": "v2.3.0",
       "filename": "Syncex-2.3.0.zip",
-      "url": "https://abdullahhussain.com.au/downloads/Syncex-2.3.0.zip",
+      "url": "https://github.com/BlankMediator/Syncex/releases/download/v2.3.0/Syncex-2.3.0.zip",
       "sha256": "637f05356014bb9c2aaae707afda83aa0fec2194e687beb1abd803d9bcaeb9a8",
       "bytes": 157667,
       "project_url": "https://abdullahhussain.com.au/projects/syncex.html",
-      "release_url": "https://abdullahhussain.com.au/projects/syncex.html#release-notes"
+      "release_url": "https://github.com/BlankMediator/Syncex/releases/tag/v2.3.0",
+      "repository": "https://github.com/BlankMediator/Syncex",
+      "mirrors": [
+        "https://abdullahhussain.com.au/downloads/Syncex-2.3.0.zip"
+      ]
     },
     {
       "project": "hilaal",
