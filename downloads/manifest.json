@@ -1,0 +1,108 @@
+{
+  "algorithm": "SHA-256",
+  "updated": "2026-11-23",
+  "assets": [
+    {
+      "project": "Syncex",
+      "kind": "release",
+      "version": "v2.3.0",
+      "filename": "Syncex-2.3.0.zip",
+      "url": "https://abdullahhussain.com.au/downloads/Syncex-2.3.0.zip",
+      "sha256": "637f05356014bb9c2aaae707afda83aa0fec2194e687beb1abd803d9bcaeb9a8",
+      "bytes": 157667,
+      "project_url": "https://abdullahhussain.com.au/projects/syncex.html",
+      "release_url": "https://abdullahhussain.com.au/projects/syncex.html#release-notes"
+    },
+    {
+      "project": "hilaal",
+      "kind": "source",
+      "version": "bddc6417a9caf503d3e72c3530a0b316dc23c166",
+      "filename": "hilaal-bddc6417a9caf503d3e72c3530a0b316dc23c166.zip",
+      "url": "https://codeload.github.com/BlankMediator/hilaal/zip/bddc6417a9caf503d3e72c3530a0b316dc23c166",
+      "sha256": "4be011643e91c51d1d51cda42daa008f9ba936dd9a788acce9b13aa3fec13a72",
+      "bytes": 12330083,
+      "repository": "https://github.com/BlankMediator/hilaal"
+    },
+    {
+      "project": "youtube-transcript-extractor",
+      "kind": "source",
+      "version": "17b04a7d26d33838566807b88f02d4cf8f86e799",
+      "filename": "youtube-transcript-extractor-17b04a7d26d33838566807b88f02d4cf8f86e799.zip",
+      "url": "https://codeload.github.com/BlankMediator/youtube-transcript-extractor/zip/17b04a7d26d33838566807b88f02d4cf8f86e799",
+      "sha256": "42075408669fc2977a8bd6048f827cb82bc55f1018e99790a2aaf5a44398ab37",
+      "bytes": 243842,
+      "repository": "https://github.com/BlankMediator/youtube-transcript-extractor"
+    },
+    {
+      "project": "QuantBot",
+      "kind": "source",
+      "version": "35fae38f37fcce183b35c3cac1722856ead1898d",
+      "filename": "QuantBot-35fae38f37fcce183b35c3cac1722856ead1898d.zip",
+      "url": "https://codeload.github.com/BlankMediator/QuantBot/zip/35fae38f37fcce183b35c3cac1722856ead1898d",
+      "sha256": "fcdaa41ddfa4f4554b0d07faaed1137d6869cc7aa1d54a926e3406986235bd40",
+      "bytes": 1492637,
+      "repository": "https://github.com/BlankMediator/QuantBot"
+    },
+    {
+      "project": "assabile-local",
+      "kind": "source",
+      "version": "319505719700374fe7de788a00158d177b0672f2",
+      "filename": "assabile-local-319505719700374fe7de788a00158d177b0672f2.zip",
+      "url": "https://codeload.github.com/BlankMediator/assabile-local/zip/319505719700374fe7de788a00158d177b0672f2",
+      "sha256": "e6e3e19b60a37ce21c539f2c041aa98824979883b0937103d4eeb12773b875b5",
+      "bytes": 3275115,
+      "repository": "https://github.com/BlankMediator/assabile-local"
+    },
+    {
+      "project": "SMSfromCSV",
+      "kind": "source",
+      "version": "24999a94c263d793eeafed2b256c9775d669da70",
+      "filename": "SMSfromCSV-24999a94c263d793eeafed2b256c9775d669da70.zip",
+      "url": "https://codeload.github.com/BlankMediator/SMSfromCSV/zip/24999a94c263d793eeafed2b256c9775d669da70",
+      "sha256": "94f971adaced6f3d51891a50b38ad837602541d256d8a541d47436df7fb3ecc3",
+      "bytes": 81164,
+      "repository": "https://github.com/BlankMediator/SMSfromCSV"
+    },
+    {
+      "project": "athan",
+      "kind": "source",
+      "version": "7181fc007a4c37e141871a3dc4563b6e27a0e032",
+      "filename": "athan-7181fc007a4c37e141871a3dc4563b6e27a0e032.zip",
+      "url": "https://codeload.github.com/BlankMediator/athan/zip/7181fc007a4c37e141871a3dc4563b6e27a0e032",
+      "sha256": "98fb7e09b552bd1b89413850e0fb4870f7f89ec43076cd26c5a5d2ff348ec264",
+      "bytes": 45485434,
+      "repository": "https://github.com/BlankMediator/athan"
+    },
+    {
+      "project": "blankmediator.github.io",
+      "kind": "source",
+      "version": "53a69daa11c3a222ccca12913bdb4f32a1b3a9b1",
+      "filename": "blankmediator.github.io-53a69daa11c3a222ccca12913bdb4f32a1b3a9b1.zip",
+      "url": "https://codeload.github.com/BlankMediator/blankmediator.github.io/zip/53a69daa11c3a222ccca12913bdb4f32a1b3a9b1",
+      "sha256": "b1f65e80cc9d1ad039e3961823ffa5a12396686ec0e023d17e0741551a3d5ac5",
+      "bytes": 2777,
+      "repository": "https://github.com/BlankMediator/blankmediator.github.io"
+    },
+    {
+      "project": "abdullahhussain.com.au-build",
+      "kind": "source",
+      "version": "421e471ec184ac5f969fd45e7254300c963d38e6",
+      "filename": "abdullahhussain.com.au-build-421e471ec184ac5f969fd45e7254300c963d38e6.zip",
+      "url": "https://codeload.github.com/BlankMediator/abdullahhussain.com.au-build/zip/421e471ec184ac5f969fd45e7254300c963d38e6",
+      "sha256": "ebd3520b37c816876e93413e7479a281e3184d537823985160e42137d64921f0",
+      "bytes": 16169161,
+      "repository": "https://github.com/BlankMediator/abdullahhussain.com.au-build"
+    },
+    {
+      "project": "SMSfromCSV",
+      "kind": "release",
+      "version": "v1.5.1-mms-preview",
+      "filename": "SMSfromCSV-v1.5.1-MMS-parallel.apk",
+      "url": "https://github.com/BlankMediator/SMSfromCSV/releases/download/v1.5.1-mms-preview/SMSfromCSV-v1.5.1-MMS-parallel.apk",
+      "sha256": "4057e73b883904a4d8cac9e033467af66be4e2178199820dd4ebbe15fef47744",
+      "bytes": 971292,
+      "repository": "https://github.com/BlankMediator/SMSfromCSV",
+      "prerelease": true
+    }
+  ]
+}
